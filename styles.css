@@ -1,0 +1,115 @@
+body {
+    width: 100%;
+    height: 100vh;
+    display:flex;
+    padding: 0;
+    margin:0
+}
+#menu-column {
+    background-color: #629bea;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.menu-item {
+    width:90%;
+    margin: 20px;
+    height: 4rem;
+    font-size: 1.7em;
+    color: rgb(35, 35, 35); 
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+#summary-column {
+    display: flex;
+    flex-direction: column;
+    background-color: #d9d9d9;
+    height: 100vh;
+     color: rgb(50, 50, 50);
+}
+iframe {
+    display:none; 
+}
+.pimple-shadow {
+    position:relative;
+    margin: 10px;
+    border-top: 3px solid rgb(93, 182, 255);
+    border-left: 3px solid rgb(93, 182, 255);
+    border-right: 3px solid rgb(60, 113, 157);
+    border-bottom: 3px solid rgb(60, 113, 157);
+    background-color:  #5585c8;
+    &:hover {
+        background-color: #65a5ff;
+        cursor: pointer;
+    }
+    &:focus {
+        background-color: #629bea;;
+        left: 2px;
+        top: 2px;
+    }
+}
+.features {
+    padding-left: 10%;
+    padding-right: 20%;
+    font-size: 1.3em;
+    height: 70vh;
+    overflow: scroll;
+}
+h1, h2 {
+    padding-left: 10%;
+}
+@media (min-width:601px) { 
+    #menu-column {    
+        width: 20%;   
+    }
+    #summary-column {
+        width: 80%;   
+    }
+    h1 {
+        font-size: 3em;
+    }
+    h2 {
+        font-size: 2em;
+    }
+    h3 {
+        font-size: 1em;
+    }
+    hr {   
+        height:3px;
+        color: rgb(35, 35, 35); 
+    }  
+    .option {
+        display:none;  
+    }
+    iframe {
+        width:80%;  
+    }
+}
+
+@media (max-width:600px) {
+    #menu-column {
+        position: fixed;
+        top:0;
+        left:0;
+        z-index:3;
+        width: 100%;
+    }
+    #summary-column {
+        position: fixed;
+        top:0;
+        left:0;
+        z-index:1;
+        width: 100%; 
+    }
+    iframe {
+        position: fixed;
+        top:0;
+        left:0;
+        z-index:2; 
+        width:100%;
+        height:100vh;     
+    }
+}   
+
